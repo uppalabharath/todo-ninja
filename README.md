@@ -1,5 +1,5 @@
 # todo-ninja
-
+https://www.youtube.com/watch?v=FGC48C2beoA&list=PL4cUxeGkcC9g0MQZfHwKcuB0Yswgb3gA5&index=3
 ## Project setup
 ```
 npm install
