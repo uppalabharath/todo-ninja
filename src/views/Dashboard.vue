@@ -5,18 +5,27 @@
     <v-container class="my-2">
       <!-- Flex grid layout -->
       <v-layout row class="mb-3" justify-end>
-        <v-btn small flat color="grey" @click="sortBy('title')">
-          <v-icon left>folder</v-icon>
-          <span class="caption">By Project Title</span>
-        </v-btn>
-        <v-btn small flat color="grey" @click="sortBy('person')">
-          <v-icon left>person</v-icon>
-          <span class="caption">By Project Owner</span>
-        </v-btn>
-        <v-btn small flat color="grey" @click="sortBy('status')">
-          <v-icon left>done</v-icon>
-          <span class="caption">By Project Status</span>
-        </v-btn>
+        <v-tooltip top>
+          <v-btn small flat color="grey" @click="sortBy('title')" slot="activator">
+            <v-icon left>folder</v-icon>
+            <span class="caption">By Project Title</span>
+          </v-btn>
+          <span>Sort by Project title</span>
+        </v-tooltip>
+        <v-tooltip top>
+          <v-btn small flat color="grey" @click="sortBy('person')" slot="activator">
+            <v-icon left>person</v-icon>
+            <span class="caption">By Project Owner</span>
+          </v-btn>
+          <span>Sort by Project owner</span>
+        </v-tooltip>
+        <v-tooltip top>
+          <v-btn small flat color="grey" @click="sortBy('status')" slot="activator">
+            <v-icon left>done</v-icon>
+            <span class="caption">By Project Status</span>
+          </v-btn>
+          <span>Sort by Project status</span>
+        </v-tooltip>
       </v-layout>
       <!-- row == flex horizontal and wrap == wrap to next line when not sifficinet -->
       <v-card flat v-for="project in projects" :key="project.title">
