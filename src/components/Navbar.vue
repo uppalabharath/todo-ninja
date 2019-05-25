@@ -14,6 +14,14 @@
     <!-- navigation drwaer needs a model variable to show and hide -->
     <!-- app prop is mandatory for navigation drwaer to display -->
     <v-navigation-drawer app class="primary" v-model="drawer">
+      <v-layout column align-center>
+        <v-flex class="mt-4">
+          <v-avatar size="100">
+            <img src="/avatar-1.png" alt>
+          </v-avatar>
+          <p class="white--text subheading pt-2">The Net Ninja</p>
+        </v-flex>
+      </v-layout>
       <v-list>
         <!-- :key binding should point to a value that uniquely identifies the item in list-->
         <v-list-tile v-for="link in links" :key="link.title" router :to="link.route">
